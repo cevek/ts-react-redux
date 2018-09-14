@@ -1,19 +1,16 @@
-
-import React from 'react';
-
-import  { Text } from '../types/todos';
+import React from "react";
 
 export type Props = {
-  onClick: () => void,
-  completed: boolean,
-  text: Text
+  onClick: () => void;
+  completed: boolean;
+  text: string;
 };
 
-const Todo = ({ onClick, completed, text }: Props) => (
+const Todo = ({onClick, completed, text}: Props) => (
   <li
     onClick={onClick}
     style={{
-      textDecoration: completed ? 'line-through' : 'none'
+      textDecoration: completed ? "line-through" : "none"
     }}
   >
     {text}

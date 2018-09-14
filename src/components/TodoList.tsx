@@ -1,16 +1,15 @@
+import React from "react";
 
-import React from 'react';
+import Todo from "./Todo";
 
-import Todo from './Todo';
-
-import  { Todos, Id } from '../types/todos';
+import {Todos} from "../types/todos";
 
 export type Props = {
-  todos: Todos,
-  onTodoClick: (id: Id) => void
+  todos: Todos;
+  onTodoClick: (id: number) => void;
 };
 
-const TodoList = ({ todos, onTodoClick }: Props) => (
+const TodoList = ({todos, onTodoClick}: Props) => (
   <ul>
     {todos.map(todo => (
       <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />

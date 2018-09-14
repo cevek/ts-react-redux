@@ -5,7 +5,6 @@ import {visibleTodosSelector} from "../selectors";
 import TodoList from "../components/TodoList";
 
 import {State, Dispatch} from "../types";
-import {Id} from "../types/todos";
 
 const mapStateToProps = (state: State) => {
   return {
@@ -15,7 +14,7 @@ const mapStateToProps = (state: State) => {
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return {
-    onTodoClick(id: Id) {
+    onTodoClick(id: number) {
       dispatch(toggleTodo(id));
     }
   };

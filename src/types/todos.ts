@@ -1,19 +1,11 @@
-export type Id = number;
-
-export type Text = string;
-
 export type Todo = {
-  id: Id,
-  text: Text,
-  completed: boolean
+  id: number;
+  text: string;
+  completed: boolean;
 };
 
-export type Todos = Array<Todo>;
-
-export type TodosState = {
-  todos: Todos
-};
+export type Todos = Todo[];
 
 export type TodosAction =
-  | { type: 'ADD_TODO', id: Id, text: Text }
-  | { type: 'TOGGLE_TODO', id: Id };
+  | {type: "ADD_TODO"; id: number; text: string}
+  | {type: "TOGGLE_TODO"; id: number};

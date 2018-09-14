@@ -1,8 +1,8 @@
-import {Id, Text, TodosAction} from "../types/todos";
+import {TodosAction} from "../types/todos";
 
-let nextTodoId: Id = 0;
+let nextTodoId = 0;
 
-export const addTodo = (text: Text): TodosAction => {
+export const addTodo = (text: string): TodosAction => {
   return {
     type: "ADD_TODO",
     id: nextTodoId++,
@@ -10,7 +10,7 @@ export const addTodo = (text: Text): TodosAction => {
   };
 };
 
-export const toggleTodo = (id: Id): TodosAction => {
+export const toggleTodo = (id: number): TodosAction => {
   return {
     type: "TOGGLE_TODO",
     id
