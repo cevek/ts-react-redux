@@ -10,7 +10,6 @@ const Link = ({active, children, onClick}: Props) => {
   if (active) {
     return <span>{children}</span>;
   }
-
   return (
     <a
       href="#"

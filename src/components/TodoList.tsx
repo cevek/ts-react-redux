@@ -1,11 +1,9 @@
 import React from "react";
-
 import Todo from "./Todo";
-
-import {Todos} from "../types/todos";
+import {Todo as TodoModel} from "../types/todos";
 
 export type Props = {
-  todos: Todos;
+  todos: TodoModel[];
   onTodoClick: (id: number) => void;
 };
 

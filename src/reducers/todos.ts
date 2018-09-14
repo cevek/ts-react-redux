@@ -1,7 +1,7 @@
-import {Todos, Todo} from "../types/todos";
 import {Action} from "../types";
+import {Todo} from "../types/todos";
 
-const todos = (state: Todos = [], action: Action): Todos => {
+const todos = (state: Todo[] = [], action: Action): Todo[] => {
   switch (action.type) {
     case "ADD_TODO":
       return [
