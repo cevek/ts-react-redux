@@ -1,18 +1,11 @@
-import  { Store as ReduxStore, Dispatch as ReduxDispatch } from 'redux';
+import {Dispatch as ReduxDispatch} from "redux";
 
-import  { TodosState, TodosAction } from './todos';
-import  {
-  VisibilityFilterState,
-  VisibilityFilterAction
-} from './visibilityFilter';
+import {TodosAction} from "./todos";
+import {VisibilityFilterAction} from "./visibilityFilter";
 
+import reducers from "../reducers";
+export type State = ReturnType<typeof reducers>;
 
-export type State = TodosState & VisibilityFilterState;
-
-export type ReduxInitAction = { type: '@@INIT' };
-
+export type ReduxInitAction = {type: "@@INIT"};
 export type Action = ReduxInitAction | TodosAction | VisibilityFilterAction;
-
-export type Store = ReduxStore<State, Action>;
-
 export type Dispatch = ReduxDispatch<Action>;
