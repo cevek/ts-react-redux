@@ -1,13 +1,12 @@
-import {VisibilityFilter} from "../types/visibilityFilter";
-import {Action} from "../types";
+import {Action, VisibilityFilter} from "../types";
 
 const visibilityFilter = (
   state: VisibilityFilter = "SHOW_ALL",
   action: Action
-): VisibilityFilter => {
+) => {
   switch (action.type) {
     case "SET_VISIBILITY_FILTER":
-      return action.filter;
+      return action.payload;
     default:
       return state;
   }

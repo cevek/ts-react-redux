@@ -1,13 +1,12 @@
-import { connect } from 'react-redux';
+import {connect} from "react-redux";
 
-import { setVisibilityFilter } from '../actions/visibilityFilter';
-import Link from '../components/Link';
+import {setVisibilityFilter} from "../actions/visibilityFilter";
+import Link from "../components/Link";
 
-import  { State, Dispatch } from '../types';
-import  { VisibilityFilter } from '../types/visibilityFilter';
+import {State, Dispatch, VisibilityFilter} from "../types";
 
 type OwnProps = {
-  filter: VisibilityFilter
+  filter: VisibilityFilter;
 };
 
 const mapStateToProps = (state: State, ownProps: OwnProps) => {

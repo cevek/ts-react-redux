@@ -1,18 +1,9 @@
-import {TodosAction} from "../types/todos";
+import {createAction} from "./createAction";
 
 let nextTodoId = 0;
 
-export const addTodo = (text: string): TodosAction => {
-  return {
-    type: "ADD_TODO",
-    id: nextTodoId++,
-    text
-  };
-};
-
-export const toggleTodo = (id: number): TodosAction => {
-  return {
-    type: "TOGGLE_TODO",
-    id
-  };
-};
+export const addTodo = createAction("ADD_TODO", (text: string) => ({
+  id: nextTodoId++,
+  text
+}));
+export const toggleTodo = createAction("TOGGLE_TODO", (id: number) => id);
